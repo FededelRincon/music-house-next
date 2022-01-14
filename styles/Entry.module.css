@@ -1,0 +1,94 @@
+.entry {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.pointer {
+    cursor: pointer;
+    transition-property: background-color, opacity;
+    transition-duration: .2s;
+}
+
+.pointer:hover {
+    background-color: rgb(217, 221, 224);
+    opacity: .8;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.content h3 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.date {
+    font-size: 1.6rem;
+    color: var(--primary)
+}
+
+.resume {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.butons {
+    margin-top: 2rem;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--negro);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition-property: background-color, color;
+    transition-duration: .3s;
+}
+
+.butons:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+}
+
+.buttonContainer {
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.goBackButon {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 2rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--negro);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition-property: background-color, color;
+    transition-duration: .3s;
+}
+
+.goBackButon:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+}
+
+.text {
+    white-space: pre-line;
+}
+
+.text::first-letter {
+    font-size: 4rem;
+    padding: 0 .4rem 0 0;
+}
