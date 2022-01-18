@@ -14,7 +14,7 @@ const Footer = () => {
                     </nav>
 
                     {/* <p className={styles.copyright}>Todos los derechos reservados &copy;	</p> */}
-                    <p className={styles.copyright}>Todos los derechos reservados &copy; </p>
+                    <p className={styles.copyright}>All rights reserved &copy; </p>
         
                 </div>
             </footer>
