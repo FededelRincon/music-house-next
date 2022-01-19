@@ -8,9 +8,10 @@ const Instrument = ({ instrument }) => {
         <>
             <div className={styles.instrument}>
                 <Image
+                    priority
                     layout='responsive'
-                    width={180}
-                    height={300}
+                    width={100}
+                    height={175}
                     src={Picture.url}
                     alt={`Image product ${name}`}
                 />
