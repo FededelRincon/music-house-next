@@ -1,10 +1,8 @@
 import Layout from '../components/Layout';
 import List from '../components/List';
 
+const Store = ({instruments, categories}) => {
 
-const Store = ({instruments}) => {
-
-    // console.log(instruments)
 
     return (
         <>
@@ -14,7 +12,10 @@ const Store = ({instruments}) => {
                 <main className='container'>
                     <h1 className='heading'>Our Products</h1>
 
-                    <List instruments={instruments} />
+                    <List 
+                        instruments={instruments} 
+                        categories={categories}
+                    />
                 </main>
             </Layout>
         </>
@@ -24,16 +25,20 @@ const Store = ({instruments}) => {
 export async function getServerSideProps () {
 
     //instruments
-    const urlInstrument = `${process.env.API_URL}/instruments`;
-    const response = await fetch(urlInstrument);
-    const instruments = await response.json();
+    const urlInst = `${process.env.API_URL}/instruments`;
+    const responseInst = await fetch(urlInst);
+    const instruments = await responseInst.json();
 
 
     //categories
+    const urlCat = `${process.env.API_URL}/categories`;
+    const responseCat = await fetch(urlCat);
+    const categories = await responseCat.json();
 
     return {
         props:{
-            instruments
+            instruments,
+            categories
         }
     }
 }

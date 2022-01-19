@@ -10,7 +10,8 @@
 }
 
 .pointer:hover {
-    background-color: rgb(217, 221, 224);
+    /* background-color: rgb(217, 221, 224); */
+    background-color: var(--grisClaro);
     opacity: .8;
 }
 

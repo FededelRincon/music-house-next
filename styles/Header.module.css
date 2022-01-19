@@ -35,12 +35,13 @@
     font-size: 1.4rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding: .5rem;
+    padding: 2rem;
+    
     transition-property: background-color;
     transition-duration: .3s;
 }
 
 .navigation a:hover {
     background-color: var(--primary);
-
+    padding-bottom: 2rem;
 }

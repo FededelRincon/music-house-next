@@ -10,7 +10,7 @@ const Instrument = ({ instrument }) => {
                 <Image
                     layout='responsive'
                     width={180}
-                    height={350}
+                    height={300}
                     src={Picture.url}
                     alt={`Image product ${name}`}
                 />
