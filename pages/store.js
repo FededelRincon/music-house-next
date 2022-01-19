@@ -26,14 +26,26 @@ export async function getServerSideProps () {
 
     //instruments
     const urlInst = `${process.env.API_URL}/instruments`;
-    const responseInst = await fetch(urlInst);
-    const instruments = await responseInst.json();
+    // const responseInst = await fetch(urlInst);
+    // const instruments = await responseInst.json();
 
 
     //categories
     const urlCat = `${process.env.API_URL}/categories`;
-    const responseCat = await fetch(urlCat);
-    const categories = await responseCat.json();
+    // const responseCat = await fetch(urlCat);
+    // const categories = await responseCat.json();
+
+
+    //optimizacion de las promesas
+    const [ responseInst, responseCat ] = await Promise.all([
+        fetch(urlInst),
+        fetch(urlCat)
+    ])
+
+    const [instruments, categories] = await Promise.all([
+        responseInst.json(), 
+        responseCat.json()
+    ]);
 
     return {
         props:{

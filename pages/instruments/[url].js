@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 import Layout from "../../components/Layout";
 
@@ -8,6 +9,12 @@ import styles from '../../styles/Product.module.css';
 const Product = ({ instrument }) => {
     const { Picture, category, description, name, price } = instrument[0];
 
+    const router = useRouter();
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        router.back();
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -45,6 +52,12 @@ const Product = ({ instrument }) => {
                                 className={styles.button}
                             />
                         </form>
+                        <a 
+                            className={styles.button}
+                            onClick={handleClick}
+                        >
+                            Go back
+                        </a>
                     </div>
                 </div>
             </Layout>
