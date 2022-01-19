@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from '../styles/Instrument.module.css';
 
+
 const Instrument = ({ instrument }) => {
     const {Picture, category, description, id, name, price, url} = instrument
     return (
