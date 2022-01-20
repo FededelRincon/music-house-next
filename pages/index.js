@@ -7,7 +7,9 @@ export default function Home({instruments, categories}) {
     return (
         <Layout
             page='Index'
+            instrument={instruments[2]}
         >
+            {/* ver opcion de hacer numero random entre 0 y 17 cada vez q carge */}
             <main className='container'>
                 <h1 className='heading'>Our Products</h1>
                 <List 

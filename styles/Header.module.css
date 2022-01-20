@@ -45,3 +45,55 @@
     background-color: var(--primary);
     padding-bottom: 2rem;
 }
+
+
+
+.model {
+    color: var(--blanco);
+    margin-top: 5rem;
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .model {
+        text-align: left;
+        width: 50%;
+    }
+}
+.model h2 {
+    font-size: 4rem;
+}
+
+.model p:first-of-type{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: 2.2rem;
+}
+
+.price {
+    font-size: 4rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 0;
+}
+
+.butons {
+    margin-top: 2rem;
+    /* display: block; */
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--blanco);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition-property: background-color, color;
+    transition-duration: .3s;
+}
+
+.butons:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+}

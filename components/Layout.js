@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Footer from './Footer';
 import Header from './Header';
 
-const Layout = ({ children, page }) => {
+const Layout = ({ children, page, instrument }) => {
     return (
         <>
             <Head>
@@ -17,13 +17,19 @@ const Layout = ({ children, page }) => {
             </Head>
 
 
-            <Header /> 
+            <Header 
+                instrument={instrument}
+            /> 
 
             { children }
 
             <Footer />
         </>
     )
+}
+
+Layout.defaultProps = {
+    instrument: null
 }
 
 export default Layout

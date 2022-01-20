@@ -3,7 +3,7 @@ import styles from '../styles/Header.module.css';
 import Image from 'next/image';
 
 
-const Header = () => {
+const Header = ({ instrument }) => {
     return (
         <header className={styles.header}>
             <div className="container">
@@ -27,7 +27,23 @@ const Header = () => {
                         <Link href="/about">About</Link>
                     </nav>
                 </div>
+
+                {instrument && (
+                    <div className={styles.model}>
+                        <h2>Model: {instrument.name}</h2>
+                        <p>{instrument.description}</p>
+                        <p className={styles.price}>$ {instrument.price}</p>
+                        <Link href={`/instruments/${instrument.url}`}>
+                            <a className={styles.butons}>
+                                Check Product
+                            </a>
+                        </Link>
+                    </div>
+                )}
             </div>
+
+
+            
         </header>
     )
 }
