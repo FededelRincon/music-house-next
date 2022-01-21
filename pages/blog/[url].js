@@ -8,10 +8,6 @@ import styles from '../../styles/Entry.module.css'
 const BlogEntry = ({ entry }) => {
     const { content, Picture, published_at, title} = entry;
 
-    // const url = `${process.env.NEXT_PUBLIC_API_URL}/blogs1234`;
-    // console.log(url)
-    // const { content } = entry;
-
     return (
         <>
             <Layout
@@ -81,21 +77,6 @@ export async function getStaticProps ({ params }) {
     }
 }
 
-// export async function getServerSideProps ({ query }) {
-//     const {id} = query;
-
-//     const url = `${process.env.API_URL}/blogs/${id}`;
-
-
-//     const response = await fetch(url);
-//     const entry = await response.json();
-
-//     return {
-//         props:{
-//             entry
-//         }
-//     }
-// }
 
 
 export default BlogEntry

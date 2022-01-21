@@ -4,6 +4,8 @@
     background-position: 50%;
     background-size: cover;
     padding: 5rem 0;
+
+    position: relative;
 }
 
 .bar {
@@ -22,6 +24,9 @@
     margin-top: 5rem;
     display: flex;
     gap: 2rem;
+
+    position: relative;
+    z-index: 1;
 }
 @media (min-width: 768px) { 
     .navigation {
@@ -96,4 +101,39 @@
 .butons:hover {
     background-color: var(--primary);
     color: var(--blanco);
+}
+
+.guitar {
+    display: none;
+}
+@media (min-width: 992px) { 
+    .guitar {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -7px;
+
+        animation-name: showHeaderImage;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+
+@keyframes showHeaderImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: translateX(0);
+    }
 }

@@ -28,7 +28,6 @@ const Blog = ({ entries }) => {
 
 
 export async function getServerSideProps() {
-// export async function getServerStaticProps() {
 
     const url = 'http://localhost:1337/blogs?_sort=created_at:desc';
     const response = await fetch(url);
