@@ -1,7 +1,7 @@
 Simil Ecommerce con next + strapi
 
 * next
-    * serverSideProps
+    * getServerSideProps
     * getStaticProps
 * strapi
 * cloudinary
