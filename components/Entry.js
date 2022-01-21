@@ -39,4 +39,8 @@ const Entry = ({entry}) => {
     )
 }
 
+Entry.defaultProps = {
+    entry: null
+}
+
 export default Entry

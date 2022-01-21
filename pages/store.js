@@ -55,4 +55,9 @@ export async function getServerSideProps () {
     }
 }
 
+Store.defaultProps = {
+    instruments: null,
+    categories: null
+}
+
 export default Store;

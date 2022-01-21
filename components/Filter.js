@@ -24,4 +24,8 @@ const Filter = ({ categories, category, setCategory }) => {
     )
 }
 
+Filter.defaultProps = {
+    categories: null
+}
+
 export default Filter;

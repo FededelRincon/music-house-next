@@ -40,5 +40,9 @@ export async function getServerSideProps() {
     }
 }
 
+Blog.defaultProps = {
+    entries: null
+}
+
 
 export default Blog;

@@ -77,6 +77,9 @@ export async function getStaticProps ({ params }) {
     }
 }
 
+BlogEntry.defaultProps = {
+    entry: null
+}
 
 
 export default BlogEntry

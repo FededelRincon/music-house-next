@@ -47,3 +47,8 @@ export async function getServerSideProps () {
         }
     }
 }
+
+Home.defaultProps = {
+    instruments: null,
+    categories: null
+}

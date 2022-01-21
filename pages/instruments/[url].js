@@ -78,4 +78,8 @@ export async function getServerSideProps({ query: {url} }) {
     }
 }
 
+Product.defaultProps = {
+    instrument: null
+}
+
 export default Product;

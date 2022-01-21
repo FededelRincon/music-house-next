@@ -19,7 +19,7 @@ const List = ({ instruments, categories }) => {
             //without any filter
             setFilterList(instruments)
         }
-
+    // eslint-disable-next-line no-use-before-define
     }, [category])
 
     return (
@@ -40,6 +40,10 @@ const List = ({ instruments, categories }) => {
             </div>
         </>
     )
+}
+
+List.defaultProps = {
+    instruments: null
 }
 
 export default List;
