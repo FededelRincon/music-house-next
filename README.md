@@ -1,6 +1,7 @@
 Simil Ecommerce con next + strapi
 
 * next
+    * serverSideProps
+    * getStaticProps
 * strapi
 * cloudinary
-    //subir las apikeys de cloudinary a heroku cuando suba el backend
