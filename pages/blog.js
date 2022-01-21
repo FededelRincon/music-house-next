@@ -29,7 +29,9 @@ const Blog = ({ entries }) => {
 
 export async function getServerSideProps() {
 
-    const url = 'http://localhost:1337/blogs?_sort=created_at:desc';
+    const url = `${process.env.API_URL}/blogs?_sort=created_at:desc`;
+
+
     const response = await fetch(url);
     const entries = await response.json();
 
