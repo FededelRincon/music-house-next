@@ -29,6 +29,17 @@ const Header = ({ instrument }) => {
                         <Link href="/store">Store</Link>
                         <Link href="/blog">Blog</Link>
                         <Link href="/about">About</Link>
+                        <Link href="/cart">
+                            <a>
+                                <Image 
+                                    layout="fixed" 
+                                    width={25} 
+                                    height={18} 
+                                    src='/img/cart.png'
+                                    alt='Imagen carrito'
+                                />
+                            </a>
+                        </Link>
                     </nav>
                 </div>
 

@@ -1,13 +1,15 @@
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from 'next/router';
 
 import Layout from "../../components/Layout";
-
 import styles from '../../styles/Product.module.css';
 
 
-const Product = ({ instrument }) => {
-    const { Picture, category, description, name, price } = instrument[0];
+const Product = ({ instrument, addCart }) => {
+    const { Picture, category, description, name, price, id } = instrument[0];
+
+    const [quantity, setQuantity] = useState(1);
 
     const router = useRouter();
 
@@ -19,7 +21,21 @@ const Product = ({ instrument }) => {
     const handleSubmit = e => {
         e.preventDefault();
 
-        alert('Call us... \n 0800-888-123456');
+        if ( quantity < 1 ) {
+            alert('not valid quantity');
+            return
+        }
+        
+        // Agregar al carrito
+        const InstrumentSelected = {
+            id, 
+            picture: Picture.url,
+            name,
+            price,
+            quantity,
+        }
+
+        addCart( InstrumentSelected );
     }
 
     return (
@@ -41,15 +57,27 @@ const Product = ({ instrument }) => {
                         <p className={styles.description}>{description}</p>
                         <p className={styles.price}>$ {price}</p>
 
-                        <p>Do you want it ?</p>
                         <form 
                             className={styles.form}
                             onSubmit={handleSubmit}
                         >
+                            <label>How many Pays:</label>
+                            <select
+                                value={quantity}
+                                onChange={ e => setQuantity(parseInt(e.target.value) ) }
+                            >
+                                <option value="0">--Select an option--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="6">6</option>
+                            </select>
+
                             <input
                                 type="submit"
-                                value="Buy it"
-                                className={styles.button}
+                                value="Add to cart"
+                                className={`${styles.buyButton} ${styles.button}`}
+
                             />
                         </form>
                         <a 
