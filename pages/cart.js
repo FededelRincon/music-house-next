@@ -24,9 +24,9 @@ const cart = ({ shopCart, updateQuantity, deleteProduct }) => {
                     <div className={styles.shopCart}> 
                         <h2>Articles</h2>
                     {/* aca comienza mi error con el key.... */}
-                        {shopCart.length === 0 ? 'Empty Cart' : (
+                        {shopCart.length === 0 ? <p>Empty Cart</p> : (
                             shopCart.map( product => (
-                                <div key={shopCart.id} className={styles.product}>
+                                <div key={product.id} className={styles.product}>
                                     <div>
                                         <Image 
                                             layout="responsive"
