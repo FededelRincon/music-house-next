@@ -5,8 +5,6 @@ import styles from '../styles/Cart.module.css';
 
 const cart = ({ shopCart, updateQuantity, deleteProduct }) => {
 
-    console.log(shopCart)
-
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
@@ -23,7 +21,6 @@ const cart = ({ shopCart, updateQuantity, deleteProduct }) => {
                 <main className={`container ${styles.content}`}>
                     <div className={styles.shopCart}> 
                         <h2>Articles</h2>
-                    {/* aca comienza mi error con el key.... */}
                         {shopCart.length === 0 ? <p>Empty Cart</p> : (
                             shopCart.map( product => (
                                 <div key={product.id} className={styles.product}>
