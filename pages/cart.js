@@ -3,7 +3,7 @@ import Image from "next/image";
 import Layout from "../components/Layout";
 import styles from '../styles/Cart.module.css';
 
-const cart = ({ shopCart, updateQuantity, deleteProduct }) => {
+const Cart = ({ shopCart, updateQuantity, deleteProduct }) => {
 
     const [total, setTotal] = useState(0);
 
@@ -91,4 +91,4 @@ const cart = ({ shopCart, updateQuantity, deleteProduct }) => {
     )
 }
 
-export default cart
+export default Cart
