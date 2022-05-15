@@ -18,7 +18,7 @@ const Footer = () => {
         
                 </div>
             </footer>
-            <div className={styles.madeBy}>Sitio realizado por FDR</div>
+            <div className={styles.madeBy}>Site made by FDR</div>
         </>
     )
 }

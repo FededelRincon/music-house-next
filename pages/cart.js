@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Layout from "../components/Layout";
 import styles from '../styles/Cart.module.css';
+import styles2 from '../styles/Product.module.css';
+
 
 const Cart = ({ shopCart, updateQuantity, deleteProduct }) => {
 
@@ -80,6 +82,13 @@ const Cart = ({ shopCart, updateQuantity, deleteProduct }) => {
                             <>
                                 <h3>Order summary</h3>
                                 <p>Total Amount: $ {total}</p>
+
+                                <input
+                                    onClick={() => alert(`Redireccionar a la pagina de paypal para pagar $ ${total}. \nGracias por su compra!!`)}
+                                    type="button"
+                                    value="Pay now"
+                                    className={`${styles2.buyButton} ${styles2.button}`}
+                                />
                             </>
                         ) : (
                             <p>There are no products</p>

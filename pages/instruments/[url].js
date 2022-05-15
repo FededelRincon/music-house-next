@@ -36,6 +36,7 @@ const Product = ({ instrument, addCart }) => {
         }
 
         addCart( InstrumentSelected );
+        alert(`${name}, agregado al carrito correctamente`)
     }
 
     return (
